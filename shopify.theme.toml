@@ -1,0 +1,3 @@
+[environments.dev]
+store = "codal-devtest.myshopify.com"
+password = "shptka_f3223aac070917bac126ea4b67dd9476"   # from the Theme Access app
