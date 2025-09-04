@@ -93,7 +93,10 @@
     >
     <label for="{{ input_id }}">
       {{ value -}}
-      {{ label_unavailable }}
+      {{ label_unavailable }} 
+      {% assign var_p = product.variants[forloop.index0].price %}
+
+      <span>{{ var_p | money }}</span>
     </label>
   {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
     <option
@@ -113,7 +116,7 @@
       {% if option_disabled -%}
         {{- 'products.product.value_unavailable' | t: option_value: value -}}
       {%- else -%}
-        {{- value -}}
+        {{- value -}} 
       {%- endif %}
     </option>
   {%- endif -%}

@@ -117,9 +117,16 @@
         {{ 'products.product.on_sale' | t }}
       </span>
 
+      <div class="in-stock-out-pdp">
+
+      <span class="badge color-{{ settings.sold_out_badge_color_scheme }}">
+        In Stock
+      </span>
+
       <span class="badge price__badge-sold-out color-{{ settings.sold_out_badge_color_scheme }}">
         {{ 'products.product.sold_out' | t }}
       </span>
+      </div>
     {%- endif -%}
   </div>
 {% endunless %}
